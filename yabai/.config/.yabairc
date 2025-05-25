@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# General settings
+yabai -m config layout bsp
+yabai -m config window_gap 8
+yabai -m config top_padding 20
+yabai -m config bottom_padding 20
+yabai -m config left_padding 20
+yabai -m config right_padding 20
+
+# Smart window behavior
+yabai -m config window_shadow off
+yabai -m config mouse_follows_focus on
+yabai -m config focus_follows_mouse off
+
+# Borders (optional if using scripting)
+yabai -m config active_window_border_color 0xff775759
+yabai -m config normal_window_border_color 0xff444444
+yabai -m config insert_feedback_color 0xffd75f5f
+yabai -m config window_border on
+yabai -m config window_border_width 3
+
+# Auto-floating specific apps
+yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="System Settings" manage=off
+yabai -m rule --add app="Finder" manage=off
+yabai -m rule --add title="Preferences" manage=off
